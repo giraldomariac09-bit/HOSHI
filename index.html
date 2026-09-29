@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta Estratégica Octubre | HOSHI Popayán</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0B0C0E;
+      --bg-card: #14161A;
+      --bg-card-alt: #1A1D23;
+      --gold-accent: #C5A059;
+      --gold-light: #E0C58A;
+      --text-primary: #F0F2F5;
+      --text-secondary: #9DA3AF;
+      --border-subtle: rgba(197, 160, 89, 0.22);
+      --border-soft: rgba(255, 255, 255, 0.06);
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Montserrat', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 70px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER HERO */
+    header {
+      padding: 70px 0 50px;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid var(--border-soft);
+      background: radial-gradient(circle at 50% 10%, rgba(197, 160, 89, 0.08) 0%, transparent 65%);
+    }
+
+    .brand-tag {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-accent);
+      margin-bottom: 12px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: 2px;
+      color: #FFF;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      color: var(--text-secondary);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      max-width: 720px;
+      margin: 0 auto 30px;
+      font-weight: 300;
+    }
+
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .badge {
+      background: rgba(197, 160, 89, 0.08);
+      border: 1px solid var(--border-subtle);
+      color: var(--gold-light);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* SECTIONS COMMON */
+    section {
+      padding: 60px 0 20px;
+    }
+
+    .section-header {
+      margin-bottom: 35px;
+      text-align: left;
+    }
+
+    .section-eyebrow {
+      font-size: 0.78rem;
+      color: var(--gold-accent);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      color: #FFF;
+      letter-spacing: 1px;
+    }
+
+    /* CARDS & GRIDS */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 28px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      border-color: var(--border-subtle);
+      transform: translateY(-2px);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+    }
+
+    /* PILARES */
+    .pillar-card {
+      background: linear-gradient(180deg, var(--bg-card) 0%, rgba(20, 22, 26, 0.6) 100%);
+      border-left: 3px solid var(--gold-accent);
+    }
+
+    .pillar-num {
+      font-family: var(--font-display);
+      color: var(--gold-accent);
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .pillar-title {
+      font-size: 1.15rem;
+      color: #FFF;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .pillar-goal {
+      color: var(--gold-light);
+      font-size: 0.88rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .pillar-desc {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* ENTREGABLES SUMMARY */
+    .summary-box {
+      background: linear-gradient(135deg, rgba(197, 160, 89, 0.12) 0%, rgba(20, 22, 26, 0.95) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+
+    .summary-item h3 {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: var(--gold-accent);
+      margin-bottom: 4px;
+    }
+
+    .summary-item p {
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .summary-item span {
+      display: block;
+      color: var(--text-secondary);
+      font-size: 0.78rem;
+      margin-top: 4px;
+    }
+
+    /* REELS */
+    .reel-card {
+      margin-bottom: 24px;
+      border: 1px solid var(--border-soft);
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .reel-header {
+      background: var(--bg-card-alt);
+      padding: 18px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .reel-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: #FFF;
+      letter-spacing: 0.5px;
+    }
+
+    .meta-tag {
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    .reel-body {
+      padding: 24px;
+    }
+
+    .script-step {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .step-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-accent);
+    }
+
+    .step-content {
+      color: var(--text-primary);
+      font-size: 0.92rem;
+    }
+
+    .step-direction {
+      color: var(--text-secondary);
+      font-style: italic;
+      font-size: 0.84rem;
+      margin-top: 2px;
+    }
+
+    .cta-highlight {
+      background: rgba(197, 160, 89, 0.08);
+      border-left: 2px solid var(--gold-accent);
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      margin-top: 10px;
+    }
+
+    /* FEED POSTS */
+    .post-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .post-number {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--gold-accent);
+      margin-bottom: 6px;
+    }
+
+    .post-title {
+      font-size: 1.05rem;
+      color: #FFF;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .post-format {
+      font-size: 0.75rem;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .post-caption {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--border-soft);
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+
+    .post-cta {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--gold-accent);
+      font-weight: 500;
+    }
+
+    /* TABLE */
+    .table-container {
+      overflow-x: auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    th {
+      background: var(--bg-card-alt);
+      color: var(--gold-light);
+      font-family: var(--font-display);
+      letter-spacing: 1px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-soft);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      color: var(--text-primary);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      background: rgba(197, 160, 89, 0.15);
+      color: var(--gold-light);
+    }
+
+    /* FOOTER CTA */
+    .final-cta {
+      margin-top: 60px;
+      background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.12) 0%, rgba(20, 22, 26, 0.98) 75%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 45px 30px;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: #FFF;
+      margin-bottom: 10px;
+    }
+
+    .final-cta p {
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 24px;
+      font-size: 0.95rem;
+    }
+
+    .action-btn {
+      display: inline-block;
+      background: var(--gold-accent);
+      color: #0B0C0E;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(197, 160, 89, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    .action-btn:hover {
+      background: var(--gold-light);
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <span class="brand-tag">Plan de Crecimiento & Marca</span>
+      <h1>HOSHI POPAYÁN</h1>
+      <p class="hero-subtitle">Estrategia Digital de Alto Impacto para Octubre: Transformamos el clima de la ciudad en el mejor motivo para reservar en nuestra barra contemporánea.</p>
+      <div class="badge-bar">
+        <span class="badge">Alta Cocina Japonesa</span>
+        <span class="badge">Chef Top 40 Latinoamérica</span>
+        <span class="badge">Público Exclusivo</span>
+        <span class="badge">Enfoque en Reservas</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- RESUMEN EJECUTIVO (EL VALOR PARA EL CLIENTE) -->
+    <section>
+      <div class="summary-box">
+        <div class="summary-item">
+          <h3>3</h3>
+          <p>Reels de Alta Producción</p>
+          <span>Autoridad, Antojo y Reservas</span>
+        </div>
+        <div class="summary-item">
+          <h3>5</h3>
+          <p>Publicaciones de Feed</p>
+          <span>Imagen de marca y estética impecable</span>
+        </div>
+        <div class="summary-item">
+          <h3>100%</h3>
+          <p>Enfoque en Conversión</p>
+          <span>Público selecto (22 a 50 años)</span>
+        </div>
+      </div>
+
+      <div class="card" style="border-left: 3px solid var(--gold-accent);">
+        <h3 style="color: #FFF; font-family: var(--font-display); margin-bottom: 8px;">El Enfoque del Mes: "El Refugio Sofisticado"</h3>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          En octubre, Popayán vive tardes frías y noches de lluvia. Mientras otros caen en disfraces y promociones que devalúan la marca, nosotros aprovechamos el clima para posicionar a <strong>HOSHI</strong> como el santuario gastronómico de la ciudad: un espacio cálido, elegante y reservado donde la técnica del Chef convierte cada visita en una velada memorable.
+        </p>
+      </div>
+    </section>
+
+    <!-- PILARES -->
+    <section>
+      <div class="section-header">
+        <span class="section-eyebrow">Dirección Estratégica</span>
+        <h2 class="section-title">Nuestros 3 Ejes de Contenido</h2>
+      </div>
+
+      <div class="grid-3">
+        <div class="card pillar-card">
+          <div class="pillar-num">01</div>
+          <h3 class="pillar-title">Criterio y Nivel</h3>
+          <p class="pillar-goal">Objetivo: Justificar el valor y prestigio</p>
+          <p class="pillar-desc">Mostramos al Chef Nicolás compartiendo secretos reales: la temperatura del arroz, el respeto al corte y la excelencia sin atajos. Quien ve el video entiende por qué Hoshi juega en otra liga.</p>
+        </div>
+
+        <div class="card pillar-card">
+          <div class="pillar-num">02</div>
+          <h3 class="pillar-title">Experiencia Sensorial</h3>
+          <p class="pillar-goal">Objetivo: Antojo inmediato y viralidad</p>
+          <p class="pillar-desc">Tomas cinematográficas de alta definición: el filo del cuchillo, el vapor del ramen recién servido, el choque sutil de copas y la coctelería de autor. Pura estética para guardar y compartir.</p>
+        </div>
+
+        <div class="card pillar-card">
+          <div class="pillar-num">03</div>
+          <h3 class="pillar-title">El Escape de la Ciudad</h3>
+          <p class="pillar-goal">Objetivo: Llenar mesas y barras</p>
+          <p class="pillar-desc">Presentamos a Hoshi como el punto de encuentro ideal para citas en pareja, reuniones de negocios y celebraciones especiales. Cada llamado a la acción invita a reservar de forma directa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REELS DETALLADOS -->
+    <section>
+      <div class="section-header">
+        <span class="section-eyebrow">Producción Audiovisual</span>
+        <h2 class="section-title">3 Videos Listos para Grabar</h2>
+      </div>
+
+      <!-- REEL 1 -->
+      <div class="reel-card">
+        <div class="reel-header">
+          <span class="reel-title">Video 1: El Favorito del Chef</span>
+          <div style="display:flex; gap:8px;">
+            <span class="meta-tag">Duración: ~50 seg</span>
+            <span class="meta-tag">Voz: Chef Nicolás</span>
+            <span class="meta-tag">Meta: Guardados y Pedidos</span>
+          </div>
+        </div>
+        <div class="reel-body">
+          <div class="script-step">
+            <span class="step-label">Gancho de Entrada (Primeros 3 seg)</span>
+            <p class="step-content">"Encontrar sushi con verdadero criterio en Popayán... ERA un reto."</p>
+            <span class="step-direction">(Plano muy cerrado del cuchillo deslizándose con precisión sobre un corte fresco en fondo tenue).</span>
+          </div>
+
+          <div class="script-step">
+            <span class="step-label">Mensaje de Valor</span>
+            <p class="step-content">"Hoy preparo mi plato predilecto en Hoshi... Observa el arroz: servido a la TEMPERATURA del cuerpo, jamás frío de nevera. No escondemos el pescado en salsas pesadas; el corte debe hablar por sí mismo: su grasa sutil, el punto de acidez y ese balance que se deshace en boca. La alta cocina no busca saturar, busca la PERFECCIÓN en lo esencial."</p>
+            <span class="step-direction">(Manos del chef dando forma al shari, toque milimétrico de soplete y montaje con pinzas).</span>
+          </div>
+
+          <div class="cta-highlight">
+            <span class="step-label">Llamado a la Acción</span>
+            <p class="step-content">"GUARDA este video para tu próxima noche... y cuando te sientes en mi barra, pídeme que lo prepare para ti."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- REEL 2 -->
+      <div class="reel-card">
+        <div class="reel-header">
+          <span class="reel-title">Video 2: El Refugio de Octubre</span>
+          <div style="display:flex; gap:8px;">
+            <span class="meta-tag">Duración: ~30 seg</span>
+            <span class="meta-tag">Voz: Narración Elegante</span>
+            <span class="meta-tag">Meta: Reservas Directas</span>
+          </div>
+        </div>
+        <div class="reel-body">
+          <div class="script-step">
+            <span class="step-label">Gancho de Entrada</span>
+            <p class="step-content">"Hay noches en las que necesitas salir de Popayán... sin salir de la ciudad."</p>
+            <span class="step-direction">(Lluvia sobre las calles frías de Popayán; corte instantáneo a la atmósfera cálida y sobria de Hoshi).</span>
+          </div>
+
+          <div class="script-step">
+            <span class="step-label">Mensaje de Valor</span>
+            <p class="step-content">"Si aprecias la discreción, la luz tenue y una mesa impecable... este es tu lugar. Vapor brotando de un ramen artesanal, hielo tallado a mano y cocina contemporánea. El entorno donde cenas cambia por completo el valor de tu conversación."</p>
+          </div>
+
+          <div class="cta-highlight">
+            <span class="step-label">Llamado a la Acción</span>
+            <p class="step-content">"COMENTA la palabra 'MESA'... y te enviamos por mensaje privado el acceso prioritario para reservar este fin de semana."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- REEL 3 -->
+      <div class="reel-card">
+        <div class="reel-header">
+          <span class="reel-title">Video 3: Cómo Comer Sushi (El Error de la Soya)</span>
+          <div style="display:flex; gap:8px;">
+            <span class="meta-tag">Duración: ~30 seg</span>
+            <span class="meta-tag">Voz: Chef en Barra</span>
+            <span class="meta-tag">Meta: Alcance Masivo y Compartidos</span>
+          </div>
+        </div>
+        <div class="reel-body">
+          <div class="script-step">
+            <span class="step-label">Gancho de Entrada</span>
+            <p class="step-content">"Si haces esto en la mesa... estás anulando la cena."</p>
+            <span class="step-direction">(Alguien sumergiendo por completo un maki en soya; la mano del chef interviene sutilmente).</span>
+          </div>
+
+          <div class="script-step">
+            <span class="step-label">Mensaje de Valor</span>
+            <p class="step-content">"La soya fue hecha para acariciar la proteína, jamás para empapar el arroz. Si mojas el grano, la pieza se desarma y el sodio tapa los sabores que maduramos con tanto cuidado. Solo hace falta un toque milimétrico en el pescado. Lo auténtico no necesita disfraz."</p>
+          </div>
+
+          <div class="cta-highlight">
+            <span class="step-label">Llamado a la Acción</span>
+            <p class="step-content">"COMPARTE este video con esa persona que ahoga el sushi en soya... y eleven el nivel en su próxima visita a Hoshi."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEED POSTS -->
+    <section>
+      <div class="section-header">
+        <span class="section-eyebrow">Galería y Presencia</span>
+        <h2 class="section-title">5 Publicaciones para el Feed</h2>
+      </div>
+
+      <div class="grid-3">
+        <!-- Post 1 -->
+        <div class="card post-card">
+          <div>
+            <div class="post-number">01</div>
+            <span class="post-format">Carrusel Educativo (4 Láminas)</span>
+            <h4 class="post-title">El Valor del Oficio</h4>
+            <p class="pillar-desc">Retrato en blanco y negro del Chef con sus cuchillos. Habla sobre la rigurosa maduración del pescado y el respaldo de un Chef Top 40 de América Latina.</p>
+          </div>
+          <div>
+            <p class="post-caption">"La excelencia no admite atajos. En nuestra cocina, cada corte responde a una disciplina de años."</p>
+            <p class="post-cta">CTA: ¿Prefieres cenar en barra o en mesa?</p>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="card post-card">
+          <div>
+            <div class="post-number">02</div>
+            <span class="post-format">Fotografía de Temporada</span>
+            <h4 class="post-title">Tarde Gris en Popayán</h4>
+            <p class="pillar-desc">Plano cenital de un Ramen artesanal humeante sobre piedra oscura, con gotas de lluvia desenfocadas en el ventanal.</p>
+          </div>
+          <div>
+            <p class="post-caption">"Octubre pide calidez. Nuestro caldo reduce a fuego lento durante horas para abrigar el paladar desde el primer sorbo."</p>
+            <p class="post-cta">CTA: Enlace de reservas disponible en el perfil.</p>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="card post-card">
+          <div>
+            <div class="post-number">03</div>
+            <span class="post-format">Secuencia de 3 Fotos</span>
+            <h4 class="post-title">Coctelería de Autor</h4>
+            <p class="pillar-desc">Hielo tallado a mano, destilado sirviéndose con humo botánico y el maridaje final junto a dos piezas de nigiri.</p>
+          </div>
+          <div>
+            <p class="post-caption">"Una cena extraordinaria no termina en el plato. Diseñamos tragos para limpiar el paladar entre texturas."</p>
+            <p class="post-cta">CTA: Menciona con quién vendrías por unos tragos.</p>
+          </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="card post-card">
+          <div>
+            <div class="post-number">04</div>
+            <span class="post-format">Fotografía de Espacio</span>
+            <h4 class="post-title">Silencio & Atmósfera</h4>
+            <p class="pillar-desc">Vista amplia del salón antes de abrir: iluminación puntual cálida, maderas nobles y arquitectura minimalista.</p>
+          </div>
+          <div>
+            <p class="post-caption">"Faltaba en Popayán un lugar donde la intimidad y la gastronomía de altura coexistieran sin prisas."</p>
+            <p class="post-cta">CTA: Asegura tu mesa con antelación para el fin de semana.</p>
+          </div>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="card post-card">
+          <div>
+            <div class="post-number">05</div>
+            <span class="post-format">Post Gráfico Minimalista</span>
+            <h4 class="post-title">La Regla del Bocado</h4>
+            <p class="pillar-desc">Nigiri suspendido en palillos sobre fondo negro absoluto con el texto sutil: <em>"Un solo bocado. Todo el balance."</em></p>
+          </div>
+          <div>
+            <p class="post-caption">"El nigiri nunca se parte en dos. Se disfruta entero para que temperatura, arroz y corte se expresen en sincronía."</p>
+            <p class="post-cta">CTA: Envíaselo a un verdadero apasionado del sushi.</p>
+          </div>
+        </div>
+
+        <!-- Card de Valor Adicional -->
+        <div class="card post-card" style="background: rgba(197, 160, 89, 0.05); border-color: var(--border-subtle);">
+          <div>
+            <div class="post-number" style="color: var(--gold-light);">+</div>
+            <span class="post-format">Historias Diarias</span>
+            <h4 class="post-title">Interacción Activa</h4>
+            <p class="pillar-desc">Acompañamiento en Historias con encuestas de maridaje, toques en vivo de cocina y recordatorios de reserva para viernes y sábado.</p>
+          </div>
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 12px; margin-top: 12px;">
+            <p style="color: var(--gold-accent); font-weight: 600; font-size: 0.85rem;">Mantiene la cuenta viva y las mesas con reserva activa semana a semana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALENDARIO DE TRABAJO -->
+    <section>
+      <div class="section-header">
+        <span class="section-eyebrow">Plan de Acción</span>
+        <h2 class="section-title">Calendario de Producción y Publicación</h2>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Semana</th>
+              <th>Actividad Principal</th>
+              <th>Entregable / Publicación</th>
+              <th>Objetivo Clave</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Semana 1</strong></td>
+              <td>Grabación en restaurante (1 sola sesión de 2 horas)</td>
+              <td>Video 1 (El Favorito del Chef) + Post 1 (Oficio)</td>
+              <td><span class="status-badge">Autoridad</span> Fijar el nivel del Chef</td>
+            </tr>
+            <tr>
+              <td><strong>Semana 2</strong></td>
+              <td>Publicación de temporada de lluvias</td>
+              <td>Video 2 (Refugio Octubre) + Post 2 (Ramen)</td>
+              <td><span class="status-badge">Conversión</span> Llenar mesas de fin de semana</td>
+            </tr>
+            <tr>
+              <td><strong>Semana 3</strong></td>
+              <td>Impulso a la barra de coctelería</td>
+              <td>Post 3 (Cóctel de Autor) + Post 4 (El Espacio)</td>
+              <td><span class="status-badge">Lifestyle</span> Atraer público de noche</td>
+            </tr>
+            <tr>
+              <td><strong>Semana 4</strong></td>
+              <td>Cierre de mes con contenido de alto alcance</td>
+              <td>Video 3 (El Error de la Soya) + Post 5 (Bocado Único)</td>
+              <td><span class="status-badge">Viralidad</span> Guardados y nuevos seguidores</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- LLAMADO A LA ACCIÓN FINAL -->
+    <div class="final-cta">
+      <h2>Todo listo para encender la barra este mes</h2>
+      <p>Con solo <strong>una jornada de grabación ágil</strong> obtenemos todo el material del mes sin interrumpir la operación del restaurante.</p>
+      <a href="mailto:?subject=Aprobación%20Estrategia%20Octubre%20Hoshi" class="action-btn">Aprobar Estrategia y Fijar Grabación</a>
+    </div>
+
+  </main>
+
+</body>
+</html>
